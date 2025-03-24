@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key';
 
-const authMiddleware = (req, res, next) => {
+export const authMiddleware = (req, res, next) => {
   // Get token from header
   const token = req.header('x-auth-token');
 
@@ -23,4 +23,4 @@ const authMiddleware = (req, res, next) => {
   }
 };
 
-export default authMiddleware;
+// export default authMiddleware;
